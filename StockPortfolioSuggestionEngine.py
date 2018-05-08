@@ -3,19 +3,35 @@
 """
 StockPortfolioSuggestionEngine.py
 
-This program accepts a ticker-symbol as input, and will output the most recent closing price and one-day price change.
+This project provides a stock portfolio suggestion engine for the user.
 
-HW #2
+User will:
+
+Input dollar amount to invest in USD (Minimum is $5000 USD)
+Pick one or two investment strategies:
+    -Ethical Investing
+    -Growth Investing
+    -Index Investing
+    -Quality Investing
+    -Value Investing
+
+The suggestion engine will output:
+
+    -Which stocks are selected based on inputed strategies.
+    -How the money are divided to buy the suggested stock.
+    -The current values (up to the sec via Internet) of the overall portfolio (including all the stocks / ETFs)
+    -A weekly trend of the portfolio value. In order words, keep 5 days history of the overall portfolio value.
+
 CMPE 285-01
 Spring 2018
 San Jose State University
-
-Author: Vincent Chao
 """
 
 # Modules
 from datetime import datetime as dt
 import pandas_datareader.data as pdr
+from flask import Flask, render_template, flash, request
+from wtforms import Form, TextField, validators, FloatField
 
 
 def retrieve_stock_data(symbol):
