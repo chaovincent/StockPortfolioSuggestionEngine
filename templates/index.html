@@ -1,0 +1,62 @@
+<!-- Frontend HTML template for Stock Investment Strategy Web App -->
+<!-- Author: Alex Lim -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
+            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title>Stock Portfolio Suggestion Engine</title>
+  </head>
+
+  <body>
+    <!-- Body of HTML file. Gets input from user for each individual field. -->
+
+    <h1>Stock Portfolio Suggestion Engine</h1>
+
+    <hr>
+
+    <!-- Form Object [ action="/submit" when form is submitted - POST request ] -->
+    <form method="POST" action="/submit">
+        <div class="form-group">
+
+            <!-- User Inputs -->
+
+            <!-- Investment Amount (minimum of $5000 USD) -->
+            <label for="inv_amt">Investment Amount: $</label>
+            <input type="text" id="inv_amt" name="inv_amt" placeholder="(minimum of $5000 USD)" required><br>
+
+            <br>
+
+            <!-- Investment Strategy #1. Drop-down list.-->
+            <strong>Investment Strategy 1:</strong>
+            <select name="strategy1" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Ethical Investing">Ethical Investing</option>
+                <option value="Growth Investing">Growth Investing</option>
+                <option value="Index Investing">Index Investing</option>
+                <option value="Quality Investing">Quality Investing</option>
+                <option value="Value Investing">Value Investing</option>
+            </select>
+
+            <!-- Investment Strategy #2. Drop-down list. -->
+            <strong>Investment Strategy 2:</strong>
+            <select name="strategy2" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Ethical Investing">Ethical Investing</option>
+                <option value="Growth Investing">Growth Investing</option>
+                <option value="Index Investing">Index Investing</option>
+                <option value="Quality Investing">Quality Investing</option>
+                <option value="Value Investing">Value Investing</option>
+                <option value="None">N/A</option>
+            </select>
+
+        </div>
+
+      <!-- Bootstrap Submit Button -->
+      <input class="btn btn-info" type="Submit" value="Submit">
+    </form>
+  </body>

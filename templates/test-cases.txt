@@ -1,0 +1,5 @@
+1) Entering invalid investment amount (e.g. DOG)
+2) Choosing the same investment strategy
+3) Not choosing any investment strategies
+4) Entering correct investment amount --> correct portfolio obtained
+5)

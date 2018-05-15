@@ -1,0 +1,85 @@
+<!-- HTML template for Stock Investment Strategy Report -->
+<!-- Author: Alex Lim -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
+            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Stock Portfolio Suggestion Report</h1>
+
+    <!-- Display Report -->
+
+    <!-- Investment Strategy 1 -->
+    <h3>Investment Strategy 1: {{strategy1}}</h3>
+
+    <!-- Stock 1 -->
+    <p>Stock 1: {{stock_name1[0]}}</p>
+    <p>Investment Amount Suggestion: ${{amt1}}</p>
+    <p>Current Date: {{current_date1[0]}}</p>
+    <p>Current Price: ${{current_price1[0]}}</p>
+    <p>Price Change: {{price_change1[0]}}</p>
+    <p>Percent Change: {{percent_change1[0]}}%</p>
+
+    <!-- Stock 2 -->
+    <p>Stock 2: {{stock_name1[1]}}</p>
+    <p>Investment Amount Suggestion: ${{amt2}}</p>
+    <p>Current Date: {{current_date1[1]}}</p>
+    <p>Current Price: ${{current_price1[1]}}</p>
+    <p>Price Change: {{price_change1[1]}}</p>
+    <p>Percent Change: {{percent_change1[1]}}%</p>
+
+       <!-- Stock 3 -->
+    <p>Stock 3: {{stock_name1[2]}}</p>
+    <p>Investment Amount Suggestion: ${{amt3}}</p>
+    <p>Current Date: {{current_date1[2]}}</p>
+    <p>Current Price: ${{current_price1[2]}}</p>
+    <p>Price Change: {{price_change1[2]}}</p>
+    <p>Percent Change: {{percent_change1[2]}}%</p>
+
+    <div id="second_strategy" style="visibility:hidden">
+        <!-- Investment Strategy 2 -->
+        <h3>Investment Strategy 2: {{strategy2}}</h3>
+
+        <!-- Stock 1 -->
+        <p>Stock 1: {{stock_name2[0]}}</p>
+        <p>Investment Amount Suggestion: ${{amt1}}</p>
+        <p>Current Date: {{current_date2[0]}}</p>
+        <p>Current Price: ${{current_price2[0]}}</p>
+        <p>Price Change: {{price_change2[0]}}</p>
+        <p>Percent Change: {{percent_change2[0]}}%</p>
+
+        <!-- Stock 2 -->
+        <p>Stock 2: {{stock_name2[1]}}</p>
+        <p>Investment Amount Suggestion: ${{amt2}}</p>
+        <p>Current Date: {{current_date2[1]}}</p>
+        <p>Current Price: ${{current_price2[1]}}</p>
+        <p>Price Change: {{price_change2[1]}}</p>
+        <p>Percent Change: {{percent_change2[1]}}%</p>
+
+           <!-- Stock 3 -->
+        <p>Stock 3: {{stock_name2[2]}}</p>
+        <p>Investment Amount Suggestion: ${{amt3}}</p>
+        <p>Current Date: {{current_date2[2]}}</p>
+        <p>Current Price: ${{current_price2[2]}}</p>
+        <p>Price Change: {{price_change2[2]}}</p>
+        <p>Percent Change: {{percent_change2[2]}}%</p>
+    </div>
+
+    <!-- Javascript to display second investment strategy is one was specified -->
+    <script>
+        var check = {{two_strategies}};
+        if (check == 1)
+        {
+            document.getElementById("second_strategy").style.visibility="visible";
+        }
+    </script>
+
+</body>
+</html>
