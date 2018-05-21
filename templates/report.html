@@ -9,67 +9,165 @@
 
     <meta charset="UTF-8">
     <title>Report</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/report.css') }}" /> -->
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/report.css">
 </head>
 <body>
-    <h1>Stock Portfolio Suggestion Report</h1>
+    <br>
+    <h1 style="margin: 10px;text-align: center;">Stock Portfolio Suggestion Report</h1>
 
     <!-- Display Report -->
 
     <!-- Investment Strategy 1 -->
-    <h3>Investment Strategy 1: {{strategy1}}</h3>
+    <div style="margin-left: 5%">
+        <h3 style="text-align: center;">Investment Strategy 1: {{strategy1}}</h3>
 
-    <!-- Stock 1 -->
-    <p>Stock 1: {{stock_name1[0]}}</p>
-    <p>Investment Amount Suggestion: ${{amt1}}</p>
-    <p>Current Date: {{current_date1[0]}}</p>
-    <p>Current Price: ${{current_price1[0]}}</p>
-    <p>Price Change: {{price_change1[0]}}</p>
-    <p>Percent Change: {{percent_change1[0]}}%</p>
-
-    <!-- Stock 2 -->
-    <p>Stock 2: {{stock_name1[1]}}</p>
-    <p>Investment Amount Suggestion: ${{amt2}}</p>
-    <p>Current Date: {{current_date1[1]}}</p>
-    <p>Current Price: ${{current_price1[1]}}</p>
-    <p>Price Change: {{price_change1[1]}}</p>
-    <p>Percent Change: {{percent_change1[1]}}%</p>
-
-       <!-- Stock 3 -->
-    <p>Stock 3: {{stock_name1[2]}}</p>
-    <p>Investment Amount Suggestion: ${{amt3}}</p>
-    <p>Current Date: {{current_date1[2]}}</p>
-    <p>Current Price: ${{current_price1[2]}}</p>
-    <p>Price Change: {{price_change1[2]}}</p>
-    <p>Percent Change: {{percent_change1[2]}}%</p>
-
-    <div id="second_strategy" style="visibility:hidden">
-        <!-- Investment Strategy 2 -->
-        <h3>Investment Strategy 2: {{strategy2}}</h3>
+        <br><br>
 
         <!-- Stock 1 -->
-        <p>Stock 1: {{stock_name2[0]}}</p>
-        <p>Investment Amount Suggestion: ${{amt1}}</p>
-        <p>Current Date: {{current_date2[0]}}</p>
-        <p>Current Price: ${{current_price2[0]}}</p>
-        <p>Price Change: {{price_change2[0]}}</p>
-        <p>Percent Change: {{percent_change2[0]}}%</p>
+        <div class="stock1" style="float:left; width:30%; background:#aaa;">
+            <p>Stock 1: {{stock_name1[0]}}</p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Date: {{current_date1[0]}}</p>
+            <p>Current Price: ${{current_price1[0]}}</p>
+            <p>Price Change: {{price_change1[0]}}</p>
+            <p>Percent Change: {{percent_change1[0]}}%</p>
+        </div>
 
         <!-- Stock 2 -->
-        <p>Stock 2: {{stock_name2[1]}}</p>
-        <p>Investment Amount Suggestion: ${{amt2}}</p>
-        <p>Current Date: {{current_date2[1]}}</p>
-        <p>Current Price: ${{current_price2[1]}}</p>
-        <p>Price Change: {{price_change2[1]}}</p>
-        <p>Percent Change: {{percent_change2[1]}}%</p>
+        <div style="float:left; width:30%; background:#bbb;" class="stock2">
+            <p >Stock 2: {{stock_name1[1]}}</p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Date: {{current_date1[1]}}</p>
+            <p>Current Price: ${{current_price1[1]}}</p>
+            <p>Price Change: {{price_change1[1]}}</p>
+            <p>Percent Change: {{percent_change1[1]}}%</p>
+        </div>
 
-           <!-- Stock 3 -->
-        <p>Stock 3: {{stock_name2[2]}}</p>
-        <p>Investment Amount Suggestion: ${{amt3}}</p>
-        <p>Current Date: {{current_date2[2]}}</p>
-        <p>Current Price: ${{current_price2[2]}}</p>
-        <p>Price Change: {{price_change2[2]}}</p>
-        <p>Percent Change: {{percent_change2[2]}}%</p>
+        <!-- Stock 3 -->
+        <div style="float:left; width:30%; background:#ccc;" class="stock3">
+            <p>Stock 3: {{stock_name1[2]}}</p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Date: {{current_date1[2]}}</p>
+            <p>Current Price: ${{current_price1[2]}}</p>
+            <p>Price Change: {{price_change1[2]}}</p>
+            <p>Percent Change: {{percent_change1[2]}}%</p>
+        </div>
+
     </div>
+    
+    <br>
+
+    <div style="margin-top: 15%;margin-left: 5%">
+        <!-- Investment Strategy 2 -->
+        <h3 style="text-align: center;">Investment Strategy 2: {{strategy2}}</h3>
+
+        <br><br>
+
+        <!-- Stock 1 -->
+        <div class="stock4" style="float:left; width:30%; background:#aaa;"">
+            <p>Stock 1: {{stock_name2[0]}}</p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Date: {{current_date2[0]}}</p>
+            <p>Current Price: ${{current_price2[0]}}</p>
+            <p>Price Change: {{price_change2[0]}}</p>
+            <p>Percent Change: {{percent_change2[0]}}%</p>
+        </div>
+
+
+        <!-- Stock 2 -->
+        <div style="float:left; width:30%; background:#bbb;" class="stock5">
+            <p>Stock 2: {{stock_name2[1]}}</p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Date: {{current_date2[1]}}</p>
+            <p>Current Price: ${{current_price2[1]}}</p>
+            <p>Price Change: {{price_change2[1]}}</p>
+            <p>Percent Change: {{percent_change2[1]}}%</p>
+        </div>
+
+
+        <!-- Stock 3 -->
+        <div style="float:left; width:30%; background:#ccc;" class="stock6">
+            <p>Stock 3: {{stock_name2[2]}}</p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Date: {{current_date2[2]}}</p>
+            <p>Current Price: ${{current_price2[2]}}</p>
+            <p>Price Change: {{price_change2[2]}}</p>
+            <p>Percent Change: {{percent_change2[2]}}%</p>               
+        </div>
+
+    </div>
+
+    <div style="margin-top: 10%;">
+        
+    </div>
+
+    <div ><marquee style="margin-top: 5%;">
+    <table class="newsbox" scrollamount="1" style="border-spacing: 10px;">
+        <tr>
+            <td>
+                <div>
+                    <a style="display:block;color:black; width: 400px; " font-family: "Comic Sans MS" href="https://www.coindesk.com/bitcoin-back-above-8500-but-does-rally-have-legs" target="_blank" ><font color="808080"><b>Back Above $8,500: Does Bitcoin's Rally Have Legs?</font color></b></a>
+                </div>
+            </td>
+
+            <td >
+                <div >
+                    <a style="display:block;color:black; width: 600px; " href="http://beta.latimes.com/business/la-fi-markets-20171129-story.html" target="_blank" ><b><font color="808080">Tech stocks drop steeply, offsetting bank and healthcare shares' rise</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 600px; " href="https://www.cnbc.com/2018/04/27/amazon-set-to-hit-all-time-high-as-wall-street-gushes-over-prime-price-hike-new-markets.html" target="_blank" ><b><font color="808080">Amazon hits all-time high as Wall Street gushes over Prime price hike, new markets</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 500px; " href="http://fortune.com/2017/03/31/amazon-stock-trillion-dollar-company-apple-tesla-google/" target="_blank" ><b><font color="808080">Amazon and the Race to Be the First $1 Trillion Company</font color></b></a>
+                </div>
+                
+            </td>
+            <td>
+                <div>
+                    <a style="display:block;color:black; width: 400px; " href="https://www.forbes.com/sites/timworstall/2014/04/13/fun-number-apple-has-twice-as-much-cash-as-the-us-government/#790e34d75570" target="_blank" ><b><font color="808080">Apple Has Twice As Much Cash As The US Government</font color></b></a>
+                </div>
+                
+            </td>
+        </tr>
+    </table>
+    </marquee>
+    <marquee direction = "right">
+    <table class="newsbox" scrollamount="1">
+        <tr>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 700px; " href="http://www.latimes.com/business/hiltzik/la-fi-hiltzik-cvs-aetna-20171204-story.html" target="_blank" ><b><font color="808080">CVS and Aetna say their huge merger will be great for consumers. Here's why you should be skeptical</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <a style="display:block;color:black; width: 700px; " href="https://www.cnbc.com/2017/12/01/amid-tax-bill-euphoria-one-big-part-of-the-stock-market-is-getting-left-behind-tech.html" target="_blank" ><b><font color="808080">Amid tax-bill euphoria, one big part of the stock market is getting left behind: Tech</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 500px; " href="https://www.nytimes.com/2017/12/04/business/dealbook/broadcom-qualcomm.html?rref=collection%2Fsectioncollection%2Fbusiness&action=click&contentCollection=business&region=rank&module=package&version=highlights&contentPlacement=5&pgtype=sectionfront" target="_blank" ><b><font color="808080">Broadcom Puts Qualcomm on the Clock</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 500px; " href="https://www.reuters.com/article/us-usa-stocks/dow-hits-record-as-investors-bet-on-tax-cuts-idUSKBN1DY1EP" target="_blank" ><b><font color="808080">Dow hits record as investors bet on tax cuts</font color></b></a>
+                </div>
+            </td>
+            <td>
+                <div >
+                    <a style="display:block;color:black; width: 500px; " href="http://www.businessinsider.com/meet-the-paypal-mafia-the-richest-group-of-men-in-silicon-valley-2014-9" target="_blank" ><b><font color="808080">Meet The PayPal Mafia, The Richest Group Of Men In Silicon Valley</font color></b></a>
+                </div>  
+            </td>
+        </tr>
+    </table>
+    </marquee>
+</div>
 
     <!-- Javascript to display second investment strategy is one was specified -->
     <script>
