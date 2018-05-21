@@ -10,8 +10,13 @@ Reference: “Data provided for free by IEX.” @ https://iextrading.com/develop
 import requests
 from flask import Flask, render_template, request
 
+
+
 # Define an instance of Flask object
+DEBUG = True
 app = Flask(__name__)
+app.config.from_object(__name__)
+
 
 """ Hard-code stocks for investment strategies (can modify later) """
 
