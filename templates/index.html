@@ -1,23 +1,31 @@
-<!-- Frontend HTML template for Stock Portfolio Suggestion Web App -->
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stock Portfolio Suggestion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
-            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-    <meta charset="utf-8">
-    <title>Stock Portfolio Suggestion Engine</title>
-  </head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+       <script src="js/index.js"></script>
+    </head>
+    <body>
+       
 
-  <body>
-    <!-- Body of HTML file. Gets input from user for each individual field. -->
-
-    <h1>Stock Portfolio Suggestion Engine</h1>
-
-    <hr>
-
+   <div  style="height:800px;font-size:26px; position: absolute; " class="intro"> 
+<!-- Introduction -->
+<h1>Stock Portfolio Suggestion Engine</h1>
+<br>
+<br>
     <!-- Form Object [ action="/submit" when form is submitted - POST request ] -->
     <form method="POST" action="/submit">
         <div class="form-group">
@@ -25,14 +33,16 @@
             <!-- User Inputs -->
 
             <!-- Investment Amount (minimum of $5000 USD) -->
-            <label for="inv_amt">Investment Amount: $</label>
+            <label for="inv_amt">Please enter an investment Amount(in $)</label><br>
             <input type="text" id="inv_amt" name="inv_amt" placeholder="(minimum of $5000 USD)" required><br>
 
             <br>
 
+
+
             <!-- Investment Strategy #1. Drop-down list.-->
-            <strong>Investment Strategy 1:</strong>
-            <select name="strategy1" required>
+            <label id="lab">Investment Strategy 1:</label><br>
+            <select class="customSelect" name="strategy1" required>
                 <option disabled selected value> -- select an option -- </option>
                 <option value="Ethical Investing">Ethical Investing</option>
                 <option value="Growth Investing">Growth Investing</option>
@@ -40,10 +50,11 @@
                 <option value="Quality Investing">Quality Investing</option>
                 <option value="Value Investing">Value Investing</option>
             </select>
-
+<br>
+<br>
             <!-- Investment Strategy #2. Drop-down list. -->
-            <strong>Investment Strategy 2:</strong>
-            <select name="strategy2" required>
+            <label id="lab">Investment Strategy 2:</label><br>
+            <select class="customSelect" name="strategy2" required>
                 <option disabled selected value> -- select an option -- </option>
                 <option value="Ethical Investing">Ethical Investing</option>
                 <option value="Growth Investing">Growth Investing</option>
@@ -56,6 +67,45 @@
         </div>
 
       <!-- Bootstrap Submit Button -->
-      <input class="btn btn-info" type="Submit" value="Submit">
+      <input class="btn btn-info" type="Submit" value="Submit" style="margin-left: 41%; margin-top: 15%; width: 15%;">
+      
+
     </form>
-  </body>
+  </div>
+    <div class="parallax"></div>
+
+
+
+
+
+   <div class="last"><br><br><br><br><br><br>
+     <h2 style="color: #f5f5f5;" align="center";>We love your feedback</h2><br><br>
+     <br>
+     <br> 
+      <h1></h1>
+      
+      <p style="color: #f5f5f5;font:30px Avenir Next Condensed;" align="center";><u>Contact us</u></p> <br><br>
+      <a href="https://www.linkedin.com/in/shilakhadawar/" target="_blank" class="fa fa-linkedin" style="margin-left: 40%"></a>
+      <a href="https://github.com/ShilakhaD" target="_blank" class="fa fa-github" ></a>
+      <a href="mailto:shilakha.dawar@sjsu.edu?" class="fa fa-envelope" ></a> 
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+       <p align="center" style="font: 30px; color:#fff; class="">&copy; 2018 www.sjsu.edu<p> 
+     
+   </div>  
+
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
